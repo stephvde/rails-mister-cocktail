@@ -1,0 +1,12 @@
+<h1>Let's have a drink</h1>
+
+<h2>
+  <ul>
+    <% @cocktails.each do |cocktail| %>
+    <li>  <%= cocktail.name %>
+      <br> <%= link_to 'See details', cocktail_path(cocktail) %> </li>
+    <% end %>
+  </ul>
+</h2>
+
+<%= link_to 'Add your favorite cocktail', new_cocktail_path, class: 'btn btn-primary' %>
