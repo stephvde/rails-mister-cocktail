@@ -1,6 +1,14 @@
-<h1>Make us thirsty</h1>
+<div class="container">
+  <div class="row">
+    <h1>Make us thirsty</h1>
+    <h2>Share with us your favorite cocktail</h2>
+    <br>
 
-<%= simple_form_for [@cocktail] do |c| %>
-<%= c.input :name %>
-<%= c.submit %>
-<% end %>
+    <%= simple_form_for [@cocktail] do |c| %>
+    <%= c.input :name %>
+    <br>
+    <%= c.submit%>
+    <% end %>
+  </div>
+</div>
+

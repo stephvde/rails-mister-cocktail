@@ -1,11 +1,18 @@
-<h1>Mix everything</h1>
+<div class="container">
+  <div class="row">
 
-<div container>
-  <div row>
-    <%= simple_form_for([@cocktail, @dose]) do |f| %>
-    <%= f.input :description %>
-    <%= f.association :ingredient %>
-    <%= f.submit %>
+        <h1 class="new-dose-title">Mix everything</h1>
+
+        <h2><%= @cocktail.name %></h2>
+        <br>
+          <%= simple_form_for([@cocktail, @dose]) do |f| %>
+          <%= f.association :ingredient, collection: @ingredients %>
+          <%= f.input :description %>
+          <%= f.submit %>
     <% end %>
+
   </div>
 </div>
+
+
+

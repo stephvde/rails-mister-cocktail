@@ -1,12 +1,46 @@
-<h1>Let's have a drink</h1>
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://images.pexels.com/photos/1283219/pexels-photo-1283219.jpeg?cs=srgb&dl=alcohol-bar-beer-1283219.jpg&fm=jpg');">
+  <div class="banner-content">
+    <h1>Let's have a drink</h1>
+    <p>Come and join us</p>
+<!--     <a class="btn btn-primary btn-lg">Start now</a> -->
+  </div>
+</div>
 
-<h2>
-  <ul>
-    <% @cocktails.each do |cocktail| %>
-    <li>  <%= cocktail.name %>
-      <br> <%= link_to 'See details', cocktail_path(cocktail) %> </li>
-    <% end %>
-  </ul>
-</h2>
+<div class="container">
+  <div class="row">
+    <div class="container">
+      <div class="row">
+        <% @cocktails.each do |cocktail| %>
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://images.pexels.com/photos/1283219/pexels-photo-1283219.jpeg?cs=srgb&dl=alcohol-bar-beer-1283219.jpg&fm=jpg');">
+            <div class="card-category"></div>
+              <h2><%= cocktail.name %></h2>
+            <div class="card-description">
 
-<%= link_to 'Add your favorite cocktail', new_cocktail_path, class: 'btn btn-primary' %>
+            </div>
+            <%= link_to 'see details', cocktail_path(cocktail), class: 'card-link'  %>
+          </div>
+        </div>
+        <% end %>
+      </div>
+    </div>
+
+    <%= link_to 'Add New Cocktail', new_cocktail_path, class: 'btn btn-home-add' %>
+
+  </div>
+</div>
+
+
+
+<!--     <h2>
+      <ul>
+        <% @cocktails.each do |cocktail| %>
+        <li>  <%= cocktail.name %>
+          <br> <%= link_to 'See details', cocktail_path(cocktail) %> </li>
+        <% end %>
+      </ul>
+    </h2> -->
+
+
+
+
